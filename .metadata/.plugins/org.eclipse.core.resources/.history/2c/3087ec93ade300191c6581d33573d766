@@ -1,0 +1,30 @@
+package com.pyramid.admin;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.repository.CrudRepository;
+import org.springframework.stereotype.Service;
+
+@Service
+public class CategoryService {
+	
+	
+	@Autowired //injects a bean and creats an instance
+	CategoryRepository cr;
+	
+	public void addCategory(Category c) {
+		cr.save(c);
+	}
+	
+	  public List<Category> getCategories(){
+	        List<Category> list = new ArrayList<>();
+	        cr.findAll().forEach(list::add);
+	        return list;
+	    }
+	
+	
+
+
+}

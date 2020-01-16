@@ -1,0 +1,8 @@
+package com.photo.model;
+
+public class Users {
+	
+	public String user;
+	public String password;
+
+}

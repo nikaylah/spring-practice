@@ -1,0 +1,6 @@
+1571061394967	Rename package 'auth'
+1571143811331	Delete element
+1571148479467	Rename type 'UserController'
+1571148512137	Rename type 'UserService'
+1571149604814	Rename type 'UserRepository'
+1571339226682	Rename resource 'comments.html'

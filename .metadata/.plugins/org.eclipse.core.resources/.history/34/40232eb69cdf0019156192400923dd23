@@ -1,0 +1,55 @@
+package com.digi.controller;
+
+import java.time.LocalDate;
+import java.util.List;
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.ModelMap;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
+import com.digi.dao.AddressDaoImpl;
+import com.digi.model.Address;
+
+@Controller
+public class AddressController {
+	ApplicationContext ctx = new ClassPathXmlApplicationContext("beans.xml");
+	// Contact contact = ctx.getBean(Contact.class);
+	AddressDaoImpl dao = ctx.getBean(AddressDaoImpl.class);
+
+	@GetMapping(path = { "/showAddress" })
+	public String showAllAddress(ModelMap model) {
+		List<Address> addresses = dao.getAddresses();
+		model.addAttribute("addresses", addresses);
+		return "addresses";
+	}
+
+	@RequestMapping(path = "/saveAddress", method = RequestMethod.POST) // PostMapping("/saveAddress")
+	public String saveAddressOld(@RequestParam("addressId") Integer id, @RequestParam("addressName") String name,
+			@RequestParam("city") String city, @RequestParam("state") String state, @RequestParam("country") String country ) {
+		// Get the data from the form and create a contact object
+		Address address = ctx.getBean(Address.class);
+		address.setAddressId(id);
+		address.setAddressName(name);
+		address.setCity(city);
+		address.setState(state);
+		address.setCountry(country);
+		// Save the contact in arraylist
+		dao.addAddress(address);
+		// redirect to showContacts
+		return "redirect:showAddress";
+	}
+
+	@GetMapping("/saveAddress") //
+	public String saveAddressNew(@ModelAttribute Address address) {
+		//address.setCreatedDate(LocalDate.now());
+		// Save the address in arraylist
+		dao.addAddress(address);
+		// redirect to showContacts
+		return "redirect:showAddresses";
+	}
+}

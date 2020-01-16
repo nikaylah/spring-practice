@@ -1,0 +1,22 @@
+package com.pyramid.admin;
+
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+@Entity
+@Table(name="catagories")
+public class Category {
+	
+	@Id
+	@Column(name="category_id")
+	private int categoryId;
+	
+	@Column(name="name", length = 13)
+	private String name;
+	
+	
+	
+
+}

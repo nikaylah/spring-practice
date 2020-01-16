@@ -1,0 +1,23 @@
+package com.digi.Student_2;
+
+
+
+
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
+
+import com.digi.Student_2.Student;
+
+
+
+public class TestMain {
+	
+	 public static void main(String[] args) {
+	        // TODO Auto-generated method stub
+    ApplicationContext o = new ClassPathXmlApplicationContext("Beans.xml");
+
+    Student s = (Student) o.getBean("student");
+    s.displayDetails();
+}
+
+}

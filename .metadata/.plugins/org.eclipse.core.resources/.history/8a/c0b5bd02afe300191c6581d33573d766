@@ -1,0 +1,32 @@
+package com.pyramid.admin;
+
+import java.io.IOException;
+
+import javax.servlet.http.HttpServletResponse;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.RestController;
+
+@RestController
+public class CategoryController {
+	
+	
+	@Autowired
+	private CategoryService cs;
+	
+	@RequestMapping("/addCategory") //changing from PostMapping to RequestMapping
+    public void addCategory(@RequestParam("categoryId") int id,
+                            @RequestParam("name") String name,
+                            HttpServletResponse response) throws IOException {
+        cs.addCategory(new Category(id, name));
+        response.sendRedirect("showCategories");
+    }
+	
+
+
+
+}

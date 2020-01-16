@@ -1,0 +1,35 @@
+package com.digi.Employee_4;
+
+
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
+
+public class App 
+{
+    public static void main( String[] args )
+    {
+        
+      	ApplicationContext c = new ClassPathXmlApplicationContext("Beans.xml");
+        
+        
+        Address a  = c.getBean("address", Address.class);
+        Employee e = c.getBean("employee", Employee.class);
+        
+        System.out.println(e.getName());
+        int i = 0;
+        for(Address a1 : e.getAddress()) {
+        System.out.println("Street: " + a1.getStreet());
+        }
+        
+        for(Address a1 : e.getAddress()) {
+          System.out.println("City: " + a1.getCity());
+          }
+        
+        for(Address a1 : e.getAddress()) {
+          System.out.println("Country: " + a1.getCountry());
+          }
+        
+      }
+   
+    }
+

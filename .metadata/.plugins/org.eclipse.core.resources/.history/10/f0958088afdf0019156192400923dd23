@@ -1,0 +1,43 @@
+package com.learn;
+
+import javax.ws.rs.GET;
+import javax.ws.rs.Path;
+import javax.ws.rs.PathParam;
+import javax.ws.rs.Produces;
+import javax.ws.rs.core.Response;
+
+@Path("/employees")
+public class RestfulTest {
+	
+	@GET
+	@Produces("text/html")
+	public Response getDetails() {
+		String e = "My Name is Nikaylah";
+		return Response.status(200).entity(e).build();
+	}
+	
+	@GET
+	@Path("{name}/{address}")
+	@Produces("text/html")
+	public Response getEmployeeDetails(
+			@PathParam("name") String name,
+			@PathParam("address") String address) {
+		
+		String str = name + "," + address;
+		return Response.status(200).entity(str).build();
+	}
+	
+	
+	@GET
+	@Path("/{empid}")
+	@Produces("text/html")
+	public Employee getDateJSON(
+			@PathParam("name") String name,
+			@PathParam("address") String address) {
+		
+		String str = name + "," + address;
+		return Response.status(200).entity(str).build();
+	}
+
+
+}

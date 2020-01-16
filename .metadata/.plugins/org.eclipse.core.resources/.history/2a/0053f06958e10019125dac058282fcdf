@@ -1,0 +1,24 @@
+<a href="/addCategory>Add Category Form</a>
+
+<form method= post action="/addCategory"></form>
+
+<!DOCTYPE html>
+<html>
+<head>
+<a href="/addCategory>Add Category Form</a>
+
+<form method= post action="/addCategory"></form>
+</head>
+<body>
+
+
+<table>
+	<tr>
+				<th scope="col">Id</th>
+				<th scope="col">Name</th>
+
+				
+			</tr>
+</table>
+</body>
+</html>

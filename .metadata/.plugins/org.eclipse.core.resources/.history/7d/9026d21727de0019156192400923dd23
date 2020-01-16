@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns = "http://www.springframework.org/schema/beans"
+  xmlns:xsi = "http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation = "http://www.springframework.org/schema/beans
+  http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+ <bean id="emp" class="com.digi.Employee_3.Employee">
+    <constructor-arg value="1"></constructor-arg>
+    <constructor-arg value="nikay"></constructor-arg>
+    <constructor-arg value="somewhere in Sandy Springs"></constructor-arg>
+    
+    </bean>
+    
+    <bean id="address" class="com.digi.Employee_3.Address">
+    <property name="city" value="atlanta"></property>
+        <property name="country" value="USA"></property>
+     
+ </bean>
+</beans>

@@ -1,0 +1,30 @@
+package com.digi.SpringJdbcHomework1;
+
+import java.util.List;
+
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
+
+import com.digi.SpringJdbcHomework1.AccountDAO;
+import com.digi.SpringJdbcHomework1.AccountDet;
+
+
+
+public class App 
+{
+    public static void main( String[] args )
+    {
+		ApplicationContext ax = new ClassPathXmlApplicationContext("Beans.xml");
+		AccountDAO cd = ax.getBean("accountDAO", AccountDAO.class);
+		
+		AccountDet c = new AccountDet();
+		c.setName("ram");
+		c.setAddress("bng");
+		cd.saveAccount(c);
+		
+		List<AccountDet> c1 = cd.getAccountDetails();
+		for(AccountDet l : c1){
+			System.out.println(l.getName() + "," + l.getAddress());
+		}
+    }
+}

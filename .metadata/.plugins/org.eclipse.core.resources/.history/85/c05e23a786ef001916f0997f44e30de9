@@ -1,0 +1,28 @@
+package com.digi.dao;
+import java.util.*;
+
+import com.digi.model.Address;
+
+public class AddressDaoImpl {
+
+	private List<Address>addresses;
+	
+	
+	public AddressDaoImpl() {
+		this.addresses = new ArrayList<Address>();
+		addresses.add(new Address(1, "Peachtree Street", "Atlanta", "Georgia", "US"));
+	}
+	
+	public List<Address> getAddresses(){
+		return addresses;
+	}
+	
+	public void setAddresses(List<Address> addresses) {
+		this.addresses = addresses;
+	}
+	
+	public void addAddress(Address address) {
+		addresses.add(address);
+	}
+  	
+}

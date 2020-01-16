@@ -1,0 +1,26 @@
+package com.pyramid.admin;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RestController;
+
+@RestController
+public class CategoryController {
+	
+	
+	@Autowired
+	private CategoryService cs;
+	
+	@RequestMapping(name="/addCategory" ,method=RequestMethod.POST)
+	public void addCategory() {
+		cs.addCategory(c);
+	}
+	
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

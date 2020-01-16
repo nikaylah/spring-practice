@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Categories</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+    <header>
+        <div class="jumbotron h2">Admin Operations - Manage Categories</div>
+    </header>
+    <div class="row">
+        <nav class="col-sm-3 col-md-6 col-lg-4" id="sidebar">
+            <ul class="list-group">
+                <li><a class="list-group-item" href="showCategories">Manage Categories</a></li>
+                <li><a class="list-group-item" href="showProducts">Manage Products</a></li>
+                <li><a class="list-group-item" href="#">View Comments</a></li>
+                <li><a class="list-group-item" href="#">Manage Users</a></li>
+            </ul>
+        </nav>
+        <article class="col-sm-9 col-md-6 col-lg-8">
+            <ul class="nav nav-tabs">
+                <li class="active"><a data-toggle="tab" href="#add">Add</a></li>
+                <li><a data-toggle="tab" href="#delete">Delete</a></li>
+                <li><a data-toggle="tab" href="#update">Update</a></li>
+            </ul>
+            <div class="tab-content">
+                <div id="add" class="tab-pane fade in active">
+                    <form method="post" action="addCategory">
+                        <div class="form-group">
+                            <label for="name-add">Name</label>
+                            <input type="text" class="form-control" name="name" id="name-add" placeholder="Enter Name to Add">
+                        </div>
+                        <input type="submit" value="Insert Category" class="btn btn-success" /><br>
+                    </form>
+                </div>
+                <div id="delete" class="tab-pane fade">
+                    <form method="post" action="deleteCategory">
+                        <div class="form-group">
+                            <label for="id-delete">ID</label>
+                            <input type="text" class="form-control" name="categoryId" id="id-delete" placeholder="Enter ID to Delete">
+                        </div>
+                        <input type="submit" value="Delete Category" class="btn btn-success" /><br>
+                    </form>
+                </div>
+                <div id="update" class="tab-pane fade">
+                    <form method="post" action="updateCategory">
+                        <div class="form-group">
+                            <label for="id-update">ID</label>
+                            <input type="text" class="form-control" name="categoryId" id="id-update" placeholder="Enter Category ID">
+                        </div>
+                        <div class="form-group">
+                            <label for="name-update">Name</label>
+                            <input type="text" class="form-control" name="name" id="name-update" placeholder="Enter Name to Update">
+                        </div>
+                        <input type="submit" value="Update Category" class="btn btn-success" /><br>
+                    </form>
+                </div>
+            </div>
+
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th scope="col">ID</th>
+                        <th scope="col">Name</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr th:each="c : ${categories}">
+                        <td th:text="${c.categoryId}">No data</td>
+                        <td th:text="${c.name}">No data</td>
+                    </tr>
+                </tbody>
+            </table>
+        </article>
+    </div>
+</body>
+</html>

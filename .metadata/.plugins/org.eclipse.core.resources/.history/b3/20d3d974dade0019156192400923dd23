@@ -1,0 +1,10 @@
+package com.digi.dao;
+
+public class ContactDaoImpl {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

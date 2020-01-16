@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+    <body>
+        <table border=3>
+            <tr>
+                <th>id</th>
+                <th>Name</th>
+                <th>description</th>
+            </tr>
+            <tr th:each="c : ${clist}">
+                <td th:text="${c.id}"> No Data </td>
+                <td th:text="${c.name}"> No Data </td>
+                <td th:text="${c.description}"> No Data </td>
+            </tr>
+        </table>
+    </body>
+</html>

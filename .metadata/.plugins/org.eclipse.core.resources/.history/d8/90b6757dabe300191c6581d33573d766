@@ -1,0 +1,32 @@
+package com.pyramid.admin;
+
+import java.util.Date;
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.ui.ModelMap;
+import org.springframework.web.bind.annotation.GetMapping;
+
+@Controller
+public class HomeController {
+
+	@Autowired
+    private CategoryService cs;
+
+    @GetMapping(path = {"/home","/","/homep"})
+    public String homePage(Model model) {
+        //adding a key value pair in model for sending data
+        model.addAttribute("message", "Happy Retail");
+        //Actual from view resolver - /WEB-INF/views/index.html
+        return "index";
+    }
+
+    @GetMapping("/showCategories")
+    public String showAllContacts(ModelMap model) {
+        List<Category> categories = cs.getCategories();
+        model.addAttribute("categories", categories);
+        return "addcategory.html";
+    }
+}

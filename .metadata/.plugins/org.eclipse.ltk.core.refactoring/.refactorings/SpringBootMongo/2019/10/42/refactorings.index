@@ -1,0 +1,8 @@
+1571160207403	Rename package 'com.example.demo'
+1571169814442	Encapsulate field 'address'
+1571170233720	Rename compilation unit 'CourseServiceImpl.java'
+1571170786109	Rename compilation unit 'CourseRepository.java'
+1571171450587	Rename compilation unit 'CourseService.java'
+1571171762141	Rename compilation unit 'CourseAlreadyExistsException.java'
+1571171783943	Rename compilation unit 'CourseNotFoundException.java'
+1571173410819	Encapsulate field 'course'

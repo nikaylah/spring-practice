@@ -1,0 +1,18 @@
+package com.digi.dao;
+
+import java.time.LocalDate;
+
+public class AddressDaoImpl {
+	
+	private int addressId;
+	private String addressName;
+	private String city;
+	private String state;
+	private String country;
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

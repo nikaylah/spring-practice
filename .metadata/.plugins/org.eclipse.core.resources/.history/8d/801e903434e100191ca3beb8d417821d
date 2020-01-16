@@ -1,0 +1,24 @@
+package com.example.demo;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+import java.util.*;
+
+@Service
+public class AccountTypeService {
+	
+	@Autowired
+	private AccountTypeRepository ar;
+	
+	public void addAccountType(AccountType at) {
+		ar.save(at);
+	}
+	
+	public List<AccountType> getAccountTypeDetails(){
+		List<AccountType> atlist = new ArrayList<>();//create a new array list
+		ar.findAll().forEach(atlist::add); //forEach is a function, addin all the information into the list
+		return atlist;
+		
+	}
+
+}

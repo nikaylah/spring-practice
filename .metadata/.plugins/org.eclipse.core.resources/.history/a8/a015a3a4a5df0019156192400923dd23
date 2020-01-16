@@ -1,0 +1,22 @@
+package com.learn;
+
+import javax.ws.rs.GET;
+import javax.ws.rs.Path;
+import javax.ws.rs.Produces;
+
+@Path("/employees")
+public class RestfulTest {
+	
+	@GET
+	@Produces("text/html")
+	
+	public Response getDetails() {
+		
+	}
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

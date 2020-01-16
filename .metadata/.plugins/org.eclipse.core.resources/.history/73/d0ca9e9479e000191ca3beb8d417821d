@@ -1,0 +1,27 @@
+package com.example.demo;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.jdbc.core.JdbcTemplate;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+@RestController
+public class DealerController {
+	
+	@Autowired
+	JdbcTemplate jt;
+	
+	@RequestMapping("/savedealer")
+	public String index() {
+		jt.execute("insert into dealer values(100, 'Nikaylah', 'bng')");
+		return "record inserted";
+	}
+	
+	@RequestMapping("/deletedealer")
+	public String index1() {
+		jt.execute("delete from dealer");
+		return "deleted all the records";
+	}
+	
+
+}

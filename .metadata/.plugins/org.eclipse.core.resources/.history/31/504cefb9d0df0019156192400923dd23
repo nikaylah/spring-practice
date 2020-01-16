@@ -1,0 +1,105 @@
+package com.digi.SpringJdbcHomework1;
+
+import java.util.List;
+
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
+
+import com.digi.SpringJdbcHomework1.AccountDAO;
+import com.digi.SpringJdbcHomework1.AccountDet;
+
+
+
+public class App 
+{
+    public static void main( String[] args )
+    {
+		ApplicationContext ax = new ClassPathXmlApplicationContext("Beans.xml");
+		AccountDAO cd = ax.getBean("accountDAO", AccountDAO.class);
+		
+		AccountDet a1 = new AccountDet();
+		a1.setName("Amy");
+		a1.setAddress("123 Windward dr");
+		a1.setAge("10");
+		a1.setCity("ATL");
+		a1.setIdentity("US Passport");
+		cd.saveAccount(a1);
+		
+		AccountDet a2 = new AccountDet();
+		a2.setName("Steve");
+		a2.setAddress("123 Windward dr");
+		a2.setAge("20");
+		a2.setCity("ATL");
+		a2.setIdentity("Alien Papers");
+		cd.saveAccount(a2);
+		
+		AccountDet a3 = new AccountDet();
+		a3.setName("Sally");
+		a3.setAddress("123 Windward dr");
+		a3.setAge("50");
+		a3.setCity("ATL");
+		a3.setIdentity("US ID");
+		cd.saveAccount(a3);
+		
+		AccountDet a4 = new AccountDet();
+		a4.setName("Bob");
+		a4.setAddress("123 Windward dr");
+		a4.setAge("65");
+		a4.setCity("ATL");
+		a4.setIdentity("US Passport");
+		cd.saveAccount(a4);
+		
+		AccountDet a5 = new AccountDet();
+		a5.setName("John");
+		a5.setAddress("123 Windward dr");
+		a5.setAge("67");
+		a5.setCity("ATL");
+		a5.setIdentity("US ID");
+		cd.saveAccount(a5);
+		
+		AccountDet a6 = new AccountDet();
+		a6.setName("Callie");
+		a6.setAddress("123 Windward dr");
+		a6.setAge("24");
+		a6.setCity("ATL");
+		a6.setIdentity("US Passport");
+		cd.saveAccount(a6);
+		
+		AccountDet a7 = new AccountDet();
+		a7.setName("Jenny");
+		a7.setAddress("123 Windward dr");
+		a7.setAge("44");
+		a7.setCity("ATL");
+		a7.setIdentity("Exchange Student");
+		cd.saveAccount(a7);
+		
+		AccountDet a9 = new AccountDet();
+		a9.setName("Sabrina");
+		a9.setAddress("123 Windward dr");
+		a9.setAge("100");
+		a9.setCity("ATL");
+		a9.setIdentity("US Passport");
+		cd.saveAccount(a9);
+		
+		AccountDet a8 = new AccountDet();
+		a8.setName("Dally");
+		a8.setAddress("123 Windward dr");
+		a8.setAge("17");
+		a8.setCity("ATL");
+		a8.setIdentity("US ID");
+		cd.saveAccount(a8);
+		
+		AccountDet a10 = new AccountDet();
+		a10.setName("Miracle");
+		a10.setAddress("123 Windward dr");
+		a10.setAge("21");
+		a10.setCity("MPL");
+		a10.setIdentity("US Passport");
+		cd.saveAccount(a10);
+		
+		List<AccountDet> c1 = cd.getAccountDetails();
+		for(AccountDet l : c1){
+			System.out.println(l.getName() + "," + l.getAddress() + "," + l.getAge() + "," + l.getCity() + "," + l.getIdentity());
+		}
+    }
+}

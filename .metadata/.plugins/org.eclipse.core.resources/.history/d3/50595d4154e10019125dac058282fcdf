@@ -1,0 +1,24 @@
+package com.pyramid.admin;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.repository.CrudRepository;
+
+public class CategoryService {
+	
+	@Autowired
+	CrudRepository<Category, Integer> cr;
+	
+	public void addCategory(category c) {
+		
+	}
+	
+	
+	
+	
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

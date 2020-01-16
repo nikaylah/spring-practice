@@ -1,0 +1,10 @@
+
+server:
+  port: ${PORT:8761} # Indicate the default PORT
+  
+euerka:
+  client:
+    registerWithEureka: false
+    fetchRegistry: false #telling the server
+  server:
+    waitTimeInMsWhenSyncEmpty: 0 #wait time

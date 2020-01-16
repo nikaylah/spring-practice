@@ -1,0 +1,10 @@
+package com.example.demo;
+
+import java.util.List;
+
+public class CustomerController {
+	
+	public List<Customer> cList = new ArrayList<Customer>();
+	
+
+}

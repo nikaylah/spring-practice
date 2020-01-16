@@ -1,0 +1,56 @@
+package com.digi.model;
+
+public class Employee {
+	
+	private int employeeId;
+	private String firstName;
+	private String lastName;
+	private String category;
+	
+//	id
+//	name
+//	lastname
+//	category
+//	address  <----add later?
+	
+	public Employee(int employeeId, String firstName, String lastName, String category) {
+		super();
+		this.employeeId = employeeId;
+		this.firstName = firstName;
+		this.lastName = lastName;
+		this.category = category;
+	}
+
+	public int getEmployeeId() {
+		return employeeId;
+	}
+
+	public void setEmployeeId(int employeeId) {
+		this.employeeId = employeeId;
+	}
+
+	public String getFirstName() {
+		return firstName;
+	}
+
+	public void setFirstName(String firstName) {
+		this.firstName = firstName;
+	}
+
+	public String getLastName() {
+		return lastName;
+	}
+
+	public void setLastName(String lastName) {
+		this.lastName = lastName;
+	}
+
+	public String getCategory() {
+		return category;
+	}
+
+	public void setCategory(String category) {
+		this.category = category;
+	}
+
+}

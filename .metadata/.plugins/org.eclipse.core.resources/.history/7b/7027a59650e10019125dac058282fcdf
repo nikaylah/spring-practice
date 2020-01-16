@@ -1,0 +1,9 @@
+package com.pyramid.admin;
+
+@Entity
+@Table("/")
+public class CategoryModel {
+	
+	
+
+}

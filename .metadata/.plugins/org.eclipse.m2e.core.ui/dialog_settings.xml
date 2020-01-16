@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<section name="MavenProjectWizardLocationPage">
+		<list key="location">
+			<item value="C:\Users\Pyramid Guest\spring-workspace"/>
+			<item value="C:\Users\Pyramid Guest\spring-workspace\SpringCaseStudy"/>
+			<item value="C:\Users\Pyramid Guest\spring-workspace\SpringHibernate\src\main\java\com\digi\SpringHibernate\App.java"/>
+			<item value="C:\Users\Pyramid Guest\spring-workspace\SpringM3\src\main\webapp\WEB-INF\views\index.jsp"/>
+			<item value="C:\Users\Pyramid Guest\spring-workspace\SpringM3\src\main\java\com\digi\dao\AddressDaoImpl.java"/>
+			<item value="C:\Users\Pyramid Guest\Downloads\Spring Assignment\Employee_4\src\main\java\com\digi\Employee_4\App.java"/>
+		</list>
+		<list key="projectNameTemplate">
+			<item value="[artifactId]"/>
+			<item value="[artifactId]-TRUNK"/>
+			<item value="[artifactId]-[version]"/>
+			<item value="[groupId].[artifactId]"/>
+			<item value="[groupId].[artifactId]-[version]"/>
+			<item value="[name]"/>
+		</list>
+	</section>
+	<section name="MavenProjectWizardArchetypePage">
+		<item key="catalog" value="All Catalogs"/>
+		<list key="projectNameTemplate">
+			<item value="[artifactId]"/>
+			<item value="[artifactId]-TRUNK"/>
+			<item value="[artifactId]-[version]"/>
+			<item value="[groupId].[artifactId]"/>
+			<item value="[groupId].[artifactId]-[version]"/>
+			<item value="[name]"/>
+		</list>
+	</section>
+	<section name="Maven2ProjectWizardArchifactPage">
+		<list key="package">
+			<item value="com.digi.RestfulWebservices"/>
+		</list>
+		<list key="groupId">
+			<item value="com.digi"/>
+		</list>
+		<list key="artifactId">
+			<item value="RestfulWebservices"/>
+		</list>
+		<list key="projectNameTemplate">
+			<item value="[artifactId]"/>
+			<item value="[artifactId]-TRUNK"/>
+			<item value="[artifactId]-[version]"/>
+			<item value="[groupId].[artifactId]"/>
+			<item value="[groupId].[artifactId]-[version]"/>
+			<item value="[name]"/>
+		</list>
+		<list key="version">
+			<item value="0.0.1-SNAPSHOT"/>
+		</list>
+	</section>
+	<section name="MavenProjectWizardArtifactPage">
+		<list key="groupId">
+		</list>
+		<list key="name">
+		</list>
+		<list key="artifactId">
+		</list>
+		<list key="projectNameTemplate">
+			<item value="[artifactId]"/>
+			<item value="[artifactId]-TRUNK"/>
+			<item value="[artifactId]-[version]"/>
+			<item value="[groupId].[artifactId]"/>
+			<item value="[groupId].[artifactId]-[version]"/>
+			<item value="[name]"/>
+		</list>
+		<list key="version">
+			<item value="0.0.1-SNAPSHOT"/>
+		</list>
+	</section>
+	<section name="org.eclipse.m2e.core.pom.overview">
+	</section>
+	<section name="org.eclipse.m2e.core.pom.dependencies">
+	</section>
+	<section name="MavenProjectImportWizardPage">
+		<list key="rootDirectory">
+			<item value="C:\Users\Pyramid Guest\Documents\SpringDatabases\SpringDatabases\src"/>
+			<item value="C:\Users\Pyramid Guest\Documents\SpringDatabases"/>
+			<item value="C:\Users\Pyramid Guest\Documents\SpringDatabase (1)\SpringDatabase\src"/>
+			<item value="C:\Users\Pyramid Guest\Documents\SpringM4"/>
+			<item value="C:\Users\Pyramid Guest\Downloads\Spring Assignment - Copy"/>
+			<item value="C:\Users\Pyramid Guest\Downloads\Spring Assignment"/>
+			<item value="C:\Users\Pyramid Guest\Downloads\SpringDatabase\SpringDatabase"/>
+			<item value="C:\Users\Pyramid Guest\Desktop\eclipse-workspace\Spring_1"/>
+		</list>
+		<list key="projectNameTemplate">
+			<item value="[artifactId]"/>
+			<item value="[artifactId]-TRUNK"/>
+			<item value="[artifactId]-[version]"/>
+			<item value="[groupId].[artifactId]"/>
+			<item value="[groupId].[artifactId]-[version]"/>
+			<item value="[name]"/>
+		</list>
+	</section>
+</section>

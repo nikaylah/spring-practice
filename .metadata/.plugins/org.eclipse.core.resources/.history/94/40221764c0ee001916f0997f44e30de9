@@ -1,0 +1,15 @@
+package com.digi.controller;
+
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
+import org.springframework.stereotype.Controller;
+
+import com.digi.dao.AddressDaoImpl;
+import com.digi.dao.EmployeeDaoImpl;
+
+@Controller
+public class EmployeeController {
+	ApplicationContext emp = new ClassPathXmlApplicationContext("beans.xml");
+	EmployeeDaoImpl dao = emp.getBean(EmployeeDaoImpl.class);
+	
+}

@@ -1,0 +1,41 @@
+package com.digi.SpringHibernate;
+import java.util.*;
+
+import org.hibernate.Session;
+import org.hibernate.SessionFactory;
+import org.hibernate.Transaction;
+
+public class CustomerDAO {
+	
+	
+	private SessionFactory sessionFactory;
+
+	/**
+	 * @param sessionFactory the sessionFactory to set
+	 */
+	public void setSessionFactory(SessionFactory sessionFactory) {
+		this.sessionFactory = sessionFactory;
+	}
+	
+	public void saveCustomer(CustomerDet c){
+		Session ss = sessionFactory.openSession();
+		Transaction t = ss.beginTransaction();   //starting transaction
+		ss.persist(c);                           //saving record in the table (aka adding)
+		t.commit();                              //changes will be commited to table
+		ss.close();                              //closing
+		
+	}
+
+	public List<CustomerDet>  getCustomerDetails(){
+		Session ss = sessionFactory.openSession();
+		List<CustomerDet> c = ss.createQuery("from CustomerDet").list(); //fetching the record
+		ss.close();
+		return c;
+	}
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

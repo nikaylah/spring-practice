@@ -1,0 +1,5 @@
+package com.digi.SpringHibernate;
+
+public class CustomerDAO {
+
+}

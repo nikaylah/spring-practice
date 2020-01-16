@@ -1,0 +1,11 @@
+package com.pyramid.admin;
+
+import javax.persistence.Entity;
+
+@Entity
+@Table("/")
+public class CategoryModel {
+	
+	
+
+}

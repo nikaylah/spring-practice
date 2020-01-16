@@ -1,0 +1,31 @@
+package com.digi.dao;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import com.digi.model.Address;
+import com.digi.model.Employee;
+
+public class EmployeeDaoImpl {
+
+	private List<Employee>employee;
+	
+	
+	public EmployeeDaoImpl() {
+		this.employee = new ArrayList<Employee>();
+		employee.add(new Employee(1, "Aly", "Zoom", "Teacher"));
+	}
+	
+	public List<Employee> getAddresses(){
+		return employee;
+	}
+	
+	public void setAddresses(List<Employee> addresses) {
+		this.employee = addresses;
+	}
+	
+	public void addAddress(Employee empl) {
+		employee.add(empl);
+	}
+  	
+}

@@ -1,0 +1,33 @@
+package com.digi.dao;
+
+import java.time.LocalDate;
+import java.util.ArrayList;
+import java.util.List;
+
+import com.digi.model.Contact;
+
+public class AddressDaoImpl {
+	
+	private List<Contact> contacts;
+	
+	public ContactDaoImpl() {
+		this.contacts = new ArrayList<Contact>();
+		contacts.add(new Contact(1, "Hello", "Personal", LocalDate.now()));
+	}
+		
+
+	public List<Contact> getContacts() {
+			return contacts;
+		}
+		
+	public void setContacts(List<Contact> contacts) {
+			this.contacts = contacts;
+		}
+	
+	public void addContact(Contact contact) {
+		contacts.add(contact);
+	}
+
+	
+
+}

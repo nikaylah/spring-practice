@@ -1,0 +1,15 @@
+package com.digi.SpringJdbcHomework1;
+
+import javax.persistence.Entity;
+import javax.persistence.Table;
+
+@Entity
+@Table(name="account1")
+public class AccountDet {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

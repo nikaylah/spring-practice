@@ -1,0 +1,9 @@
+<!DOCTYPE html>
+<html>
+<body>
+    <p>
+        <span th:text="${message}">No data</span>
+    </p>
+    <a href="showCategories" class="btn btn-primary">Add Category</a>
+</body>
+</html>

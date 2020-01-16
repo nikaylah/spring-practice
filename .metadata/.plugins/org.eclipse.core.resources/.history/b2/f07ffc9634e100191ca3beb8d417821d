@@ -1,0 +1,39 @@
+package com.example.demo;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RestController;
+import java.util.*;
+@RestController
+public class AccountTypeController {
+	
+	@Autowired
+	private AccountTypeService as;
+	
+	@RequestMapping(value="/add-accounttype", method=RequestMethod.POST)
+	public void addAccountType(@RequestBody AccountType a) {
+		as.addAccountType(a);
+	}
+	
+	@GetMapping("/accountTypeList")
+	public ResponseEntity<?> getAccountTypeDetails(){
+		ResponseEntity<?> response = null;
+	try {
+		List<AccountType> alist = as.getAccountTypeDetails();
+		response = ResponseEntity.status(HttpStatus.OK).body(alist);
+	}
+	catch(Exception e) {
+		response = ResponseEntity.status(HttpStatus.NOT_FOUND).build();
+		e.printStackTrace();
+	}
+	return response;
+}
+	
+	
+
+}

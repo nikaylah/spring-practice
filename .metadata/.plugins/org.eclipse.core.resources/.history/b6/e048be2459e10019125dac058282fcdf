@@ -1,0 +1,28 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<a href="/addCategory">Add Category Form</a>
+
+
+</head>
+<body>
+
+<form method= "post" action="/addCategory">
+
+
+<table>
+	<tr>
+				<td>Category Id</td>
+				<td><input type="tet name="categoryId"</td>
+				<td>Category Name</td>
+				
+				<input type="submit value="Insert Category"/>
+
+				
+	</tr>
+</table>
+
+</form>
+</body>
+</html>

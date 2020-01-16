@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns = "http://www.springframework.org/schema/beans"
+  xmlns:xsi = "http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation = "http://www.springframework.org/schema/beans
+  http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+  
+<bean id="address" class="com.digi.Employee_4.Address">
+<property name="street" value="somewhere in minneapolis"></property>
+</bean>
+
+<bean id="city" class="com.digi.Employee_4.Address">
+<property name="city" value="Minneapolis"></property>
+</bean>
+
+<bean id="country" class="com.digi.Employee_4.Address">
+<property name="country" value="America"></property>
+</bean>
+
+<bean id="employee" class="com.digi.Employee_4.Employee">
+<property name="name" value="Nikaylah"></property>
+<property name="address">
+<list>
+<ref bean="address" />
+<ref bean="city" />
+<ref bean="country" />
+<ref bean="country" />
+
+</list>
+</property>
+</bean>
+
+</beans>
